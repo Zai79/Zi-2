@@ -106,7 +106,7 @@ const PROMPTS = {
 // 🔥 التغيير الوحيد:
 const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
-const MODEL = 'meta-llama/Meta-Llama-3.1-405B-Instruct';
+const MODEL = 'meta-llama/Meta-Llama-3.1-8B-Instruct';
 
 // ===== call with retries =====
 async function callTogetherWithRetries(systemContent, userContent) {
