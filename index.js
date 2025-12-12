@@ -1,3 +1,4 @@
+
 // نفس كودك بالضبط — ما تغير حرف واحد إلا مكان API_URL ✔
 
 import 'dotenv/config';
@@ -104,8 +105,8 @@ const PROMPTS = {
 };
 
 // 🔥 التغيير الوحيد:
-const API_URL = 'https://openrouter.ai/api/v1/chat/completions';
-model: "google/gemini-2.0-flash-exp"
+const API_URL = process.env.API_URL;
+const MODEL = process.env.MODEL;
 
 
 // ===== call with retries =====
