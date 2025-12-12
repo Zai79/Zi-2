@@ -8,7 +8,7 @@ import express from 'express';
 
 // ===== ENV =====
 const TOKEN = process.env.DISCORD_TOKEN;
-const TOGETHER_KEY = process.env.TOGETHER_API_KEY; // يستخدم مع OpenRouter/Together حسب إعدادك
+const TOGETHER_KEY = process.env.OPENROUTER_KEY;
 const CHANNEL_ID = process.env.TARGET_CHANNEL_ID;
 const ROLE_ID = process.env.GIRLS_ROLE_ID || null;
 const BOT_NAME = process.env.BOT_NAME || 'Miko';
@@ -145,7 +145,7 @@ async function callTogether(systemContent, userContent) {
   const res = await fetch(API_URL, {
     method: 'POST',
     headers: {
-      'Authorization': `Bearer ${TOGETHER_KEY}`,
+      'Authorization': `Bearer ${process.env.OPENROUTER_KEY}`,
       'Content-Type': 'application/json'
     },
     body: JSON.stringify(body),
